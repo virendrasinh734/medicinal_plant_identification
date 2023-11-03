@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <script src="https://apis.mapmyindia.com/advancedmaps/v1/40fc61ae97e3e151928817751d0acb89/map_load?v=1.3"></script>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+  <link rel="stylesheet" href="../static/styles.css" />
+  <title>AI based Skin Detection Tool</title>
+</head>
+
+<body>
+  
+  <main>
+    <section class="prototype" id="prototype">
+      <div class="centered">
+        <div class="header">
+          <h2>Prototype</h2>
+          <h3>Attach your plant sample below:</h3>
+        </div>
+        <div class="content">
+          <div class="left">
+            <h1>Image Classifier</h1>
+            <form method="POST" enctype="multipart/form-data">
+              <input type="file" name="file" accept=".jpg, .jpeg, .png, .gif" id="imageInput">
+              <br>
+              <input type="submit" value="Upload" class="beautiful-button">
+            </form>
+            <br>
+            <!-- Add an image element for preview -->
+            <img src="#" alt="" id="imagePreview" style="max-width: 100%; max-height: 200px;">
+
+          </div>
+          <div class="right">
+            <!-- <div>
+                {% if data %}
+                  <p>Predicted Disease: {{ data[0] }}</p>
+                  <p>Disease Description: {{ data[1] }}</p>
+                {% endif %}
+              </div> -->
+          </div>
+        </div>
+      </div>
+    </section>
+    </section>
+
+  </main>
+
+  <!-- <script src="{{ url_for('static', filename='script.js') }}"></script> -->
+  <!-- <script src="../static/script1.js"></script> -->
+  <script>
+    // Get references to the input and image elements
+const imageInput = document.getElementById('imageInput');
+const imagePreview = document.getElementById('imagePreview');
+
+// Add an event listener to the file input
+imageInput.addEventListener('change', function() {
+  // Check if a file is selected
+  if (imageInput.files && imageInput.files[0]) {
+    const reader = new FileReader();
+
+    // Read the selected file as a data URL
+    reader.readAsDataURL(imageInput.files[0]);
+
+    // Set the image source to the data URL when it's loaded
+    reader.onload = function(e) {
+      imagePreview.src = e.target.result;
+    };
+  }
+});
+
+  </script>
+  <script>
+    
+  </script>
+
+</body>
+
+
+</html>

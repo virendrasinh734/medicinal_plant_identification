@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <link rel="stylesheet" href="../static/styles.css" />
+  <title>Plant Identification</title>
+</head>
+
+<body>
+  <main>
+    <section class="prototype" id="prototype">
+      <div class="centered">
+        <div class="header">
+          <h2>Prototype</h2>
+          <h3>Attach your plant sample below:</h3>
+        </div>
+        <div class="content">
+          <div class="left">
+            <h1>Image Classifier</h1>
+            <form method="POST" enctype="multipart/form-data">
+              <input type="file" name="file" accept=".jpg, .jpeg, .png, .gif" id="imageInput">
+              <br>
+              <input type="submit" value="Upload" class="beautiful-button">
+            </form>
+            <br>
+            <img src="#" alt="" id="imagePreview" style="max-width: 100%; max-height: 200px;">
+          </div>
+          <div class="right" style="background-color: antiquewhite;">
+            <div>
+              {% if data %}
+              <p >Predicted Plant: {{ data[0] }}</p>
+            {% endif %}
+              </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+  
+    
+
+
+</body>
+
+
+</html>

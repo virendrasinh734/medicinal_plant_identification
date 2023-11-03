@@ -1,0 +1,619 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@800&display=swap");
+
+/* Reset some default styles */
+body, h1, h2, p {
+  margin: 0;
+  padding: 0;
+  color: #FFF5E0;
+  background-color:  #141E46;
+  /* background-color: #141E46; */
+}
+
+/* Apply a background color to the body */
+* {
+  font-family: 'Raleway', sans-serif;
+}
+
+/* Style the header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #0c132f; /* Dark background color for the header */
+  padding: 10px 20px; /* Reduce top and bottom padding */
+}
+
+.logo img {
+  border-radius: 10px;
+  max-width: 100px;
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex; /* Display the list items horizontally */
+}
+
+.nav-link {
+  color: #FFF5E0;
+  text-decoration: none;
+  margin-right: 20px; /* Add right margin for spacing */
+  padding: 5px 10px;
+  border: 2px solid transparent; /* Transparent border initially */
+  border-radius: 5px;
+}
+
+.nav-link:hover {
+  background-color: #555; /* Darker background on hover */
+  border-color: #555; /* Darker border on hover */
+}
+
+/* Style the landing section */
+.landing {
+  height: 100vh; /* Make it cover the entire viewport height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color:  #141E46; /* Dark background color for the landing section */
+  color: white;
+  position: relative; /* Add this for positioning */
+}
+
+/* Keyframes for the up and down movement */
+@keyframes moveUpDown {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px); /* Adjust the distance and direction as needed */
+  }
+}
+
+.landing h1 {
+  font-size: 5rem; /* Reduce the font size */
+  margin-bottom: 5px; /* Reduce the bottom margin */
+  padding: 0; /* Remove padding */
+  animation: moveUpDown 2s infinite; /* Apply the animation to the text */
+}
+
+.landing h2 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.innominds-text {
+  color: #FF6969; /* or any other color value you prefer */
+}
+
+.product-description {
+  font-size: 1.4rem;
+  margin-top: -50px;
+  justify-self: flex-end;
+  /* margin-left: 350px; */
+  /* text-align: center; */
+  background:transparent;
+  color: #FF6969;
+  text-align: end;
+}
+
+/* Add this CSS to your existing stylesheet */
+.detect-button {
+  text-decoration: none;
+  font-size: 20px;
+  background-color: #FF6969; /* Button background color */
+  color: #1a350c !important; /* Text color */
+  padding: 15px 15px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease; /* Add smooth transition for hover effect */
+}
+
+.detect-button a {
+  text-decoration: none; /* Remove underline */
+}
+
+.detect-button:hover{
+  transform: scale(1.05); /* Expand by 20% on hover */
+  background-color: #f70046e2; /* Change background color on hover */
+  color: #FFF5E0;
+}
+
+
+/* Style the prototype section */
+.prototype {
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Align header to the top */
+  text-align: center;
+  background-color: #141E46; /* Darker background color for the prototype section */
+  color: white;
+}
+
+/* specialists */
+.container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  margin: 0;
+}
+
+.left {
+  width: 50%;
+  padding: 20px;
+  background-color: #fff5e0d8;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.right {
+  height: 75vh;
+  width: 50%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #FFF5E0;
+}
+
+
+.header {
+  margin-bottom: 20px;
+}
+
+.header h2 {
+  font-size: 3.5rem;
+}
+
+.header h3 {
+  color: #FFF5E0;
+  font-size: 1.2rem;
+}
+
+.content {
+  display: flex;
+  justify-content: space-between; /* Add space between .left and .right */
+  width: 80%; /* Adjust the width as needed */
+  margin: 0 auto; /* Center the content horizontally */
+}
+
+.left {
+  text-align: left;
+  border-radius: 10px;
+  height: 500px;
+  padding: 20px;
+  margin-right: 20px; /* Add margin to create space */
+  flex: 0 0 calc(30% - 20px); /* Calculate the width for .left */
+}
+
+.left h1 {
+  /* font-style: italic; */
+  color: #FFF5E0;
+  border-radius: 10px;
+  padding: 10px;
+  /* background-color: #fff5e0f0; */
+  font-size: 2rem;
+  margin-bottom: 80px; /* Add spacing between the header and the form */
+}
+
+.left input[type="submit"] {
+  /* Increase the button size */
+  padding: 15px 30px;
+  font-size: 1.2rem;
+}
+
+h1 {
+  font-size: 50px;
+  font-family: "Raleway", sans-serif;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+label {
+  margin-top: 30px;
+  font-weight: bold;
+  font-size: 25px;
+}
+
+.inp {
+  padding: 8px;
+  margin-top: 5px;
+  width: 90%;
+  border: 1px solid #ccc;
+  border-radius: 50px;
+}
+
+.beautiful-button {
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: #C70039;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Added transform transition */
+}
+
+.beautiful-button:hover {
+  background-color: #1fc248;
+  transform: scale(1.1); /* Expands by 10% on hover */
+}
+
+
+button:hover {
+  background-color: #1fc248;
+}
+
+.right {
+  text-align: right;
+  padding: 20px;
+  flex: 0 0 calc(50% - 20px); /* Calculate the width for .right */
+}
+
+/* Style the prediction part */
+.right h2 {
+  font-size: 2rem; /* Adjust the font size as needed */
+}
+
+.right h3 {
+  font-size: 1.5rem; /* Adjust the font size as needed */
+}
+
+/* Style the our team section (add your content and styling here) */
+.ourteam {
+  margin-top: 20px;
+  min-height: 50vh;
+  background-color: #141E46; /* Darker background color for the our team section */
+  color: white;
+}
+
+
+
+/* Our team */
+
+/* Center the h1 */
+h1.about-us {
+  text-align: center;
+  font-size: 50px;
+  font-weight: bold;
+  margin-top: 30px;
+  /* padding-top: 10px; */
+  margin-bottom: 0;
+}
+
+/* Team members container */
+.team-members {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 15px; /* Adjust the spacing between cards */
+  padding: 50px;
+}
+
+/* Team member card styling */
+.team-member-card {
+  width: calc(25% - 5%); /* Adjust the width and margin as needed */
+  height: 400px; /* Adjust the card height */
+  margin-left: 30px;
+  margin-right: 30px; /* Add margin for spacing between cards */
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.5s ease;
+  position: relative;
+}
+
+.team-member-card img {
+  width: 100%;
+  height: 100%; /* Set the height of the image within the card */
+  object-fit: cover;
+}
+
+.team-member-card h2 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px;
+  margin: 0;
+  color: #C70039;
+  background-color: #FFF5E0;
+  font-size: 1.5rem;
+  text-align: center;
+  transition: bottom 0.5s ease;
+}
+
+.team-member-card:hover {
+  transform: scale(1.03); /* Add a subtle scaling effect on hover */
+}
+
+.team-member-card:hover h2 {
+  bottom: -50px;
+}
+
+.team-member-card ul {
+  position: absolute;
+  bottom: -100%;
+  left: 0;
+  width: 100%;
+  padding: 10px;
+  margin: 0;
+  color: #FFF5E0;
+  background-color: #C70039;
+  list-style: none;
+  text-align: center;
+  transition: bottom 0.5s ease;
+}
+
+.team-member-card:hover ul {
+  bottom: 0;
+}
+
+.team-member-card li {
+  margin-bottom: 10px;
+}
+
+.team-member-card .social-links {
+  display: inline-block;
+  margin: 0 5px;
+}
+
+.team-member-card .social-links a {
+  color: white;
+  font-size: 1.5rem;
+  transition: color 0.5s ease;
+}
+
+.team-member-card .social-links a:hover {
+  color: #0077b5;
+}
+
+
+/* Center the content vertically and horizontally */
+.specialists {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 50vh; /* Increase the height for a bigger section */
+  background-color: #141E46; /* Set a background color */
+  margin-bottom: 5px; /* Add margin to create space below this section */
+}
+
+/* Style the heading */
+.specialists h1 {
+  margin-top: 150px;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #FFF5E0;
+}
+
+/* Style the form container */
+.specialists form {
+  background-color: #fff5e0c2;
+  padding: 30px; /* Increase the padding to center the form content */
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.5s ease-in-out; /* Add a smooth transition effect */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center the content horizontally within the form */
+}
+
+/* Style the heading inside the form */
+.specialists form h1 {
+  
+  font-size: 24px;
+  font-weight: bolder;
+  margin-top: 0;
+}
+
+label[for="latitude"] {
+  color: #141E46;
+}
+label[for="longitude"] {
+  color: #141E46;
+}
+
+/* Style form labels and inputs */
+.specialists label,
+.specialists input {
+  display: block;
+  padding: 8px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+/* Style the submit button */
+.specialists input[type="submit"] {
+  background-color: #C70039;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.specialists input[type="submit"]:hover {
+  background-color: #1fc248; 
+}
+
+
+/* Hover effect for the form */
+.specialists form:hover {
+  transform: scale(1.12); /* Expand by 12% on hover */
+}
+
+/* Style form labels and inputs for the email form */
+.email-form label,
+.email-form input {
+  display: block;
+  color: #141E46;
+  padding: 5px; /* Reduced padding */
+  border-radius: 8px;
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+/* Style the submit button for the email form */
+.email-form input[type="submit"] {
+  background-color: #C70039;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.email-form input[type="submit"]:hover {
+  background-color: #1fc248;
+}
+
+/* Hover effect for the email form */
+.email-form form:hover {
+  transform: scale(1.12); /* Expand by 12% on hover */
+}
+
+
+  /* Your existing styles */
+
+  /* Add CSS classes for text inside Jinja template */
+.jinja-text {
+  font-size: 18px; /* Adjust the font size as needed */
+  color: #222307;
+  background: transparent; /* Light/radium font color for dark background */
+  /* text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); Text shadow */
+  /* Add more styles as needed */
+}
+
+/* Add a class for headings inside Jinja template */
+.jinja-heading {
+  font-size: 24px; /* Adjust the font size as needed */
+  color: #0ec10e; /* Heading font color */
+ /* Heading text shadow */
+  /* Add more styles as needed */
+}
+
+/* Style the list to remove bullets and left-align */
+.jinja-list {
+  list-style: none; /* Remove bullets */
+  padding-left: 0; /* Remove default padding */
+  text-align: left; /* Left-align list items */
+}
+
+/* Center the content within the right div */
+.right {
+  text-align: center; /* Center text content */
+}
+.points{
+  color:#1fc248;
+  font-weight: bold;
+}
+.jinja{
+  border: #0077b5,2px,;
+  border-radius: 4px;
+  border-color: #0ec10e;
+  box-shadow: inset;
+}
+#pred{
+  color: #E94F37;
+}
+#desc{
+  color: #048A81;
+}
+.jinja li::before {
+  content: "📌 ";
+}
+
+.jinja li{
+  margin-bottom: 5px;
+}
+
+.container li::before {
+  content: "📌 ";
+}
+
+.hero {
+  background-color: #F0E68C;
+  text-align: left; /* Align text and list to the left */
+  padding: 100px 0;
+}
+
+.hero h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color:#C70039; /* Change font color to green */
+  /* #4CAF50 */
+  background: transparent;
+}
+.hero p{
+  justify-self: end;
+  background: transparent;
+  color:#C70039 ;
+}
+
+.hero ul {
+  list-style-type: none; /* Use bullet points for the list */
+  padding-left: 20px; /* Add left padding for the list */
+  margin-top: 20px;
+  font-size: 18px;
+  color: #4CAF50; /* Change font color for list items */
+}
+
+.step-box {
+  border: 2px solid #C70039; /* Add a green border */
+  /* #4CAF50 */
+  /* margin-left: 430px; */
+  width: 500px;
+  padding: 20px;
+  border-radius: 10px; /* Rounded corners */
+  background-color: rgba(255, 255, 255, 0.8); 
+  display: flex;
+  flex-direction: column;
+  /* Transparent white background */
+}
+.hero {
+  background-image: url('derm2.jpg');
+  background-position: center;
+  background-size: cover; /* Resize image to cover the entire container */
+}
+#home{
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+#home p{
+  justify-self: flex-end;
+}
+.detect-button{
+  align-self: center;
+  /* margin-left: auto; */
+}
+#place{
+  display: flex;
+  justify-content: flex-end;
+}
+.container{
+  display: flex;
+  justify-content: flex-end;
+}
+.txt{
+  margin-top: -10px;
+  margin-bottom: 20px;
+}
+/* #specialists{
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+} */
