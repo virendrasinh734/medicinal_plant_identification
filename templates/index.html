@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 
   <link rel="stylesheet" href="../static/styles.css" />
-  <title>AI based Plant Detection</title>
+  <title>AI based Skin Detection Tool</title>
 </head>
 
 <body>
@@ -18,24 +18,20 @@
     <section class="prototype" id="prototype">
       <div class="centered">
         <div class="header">
-          <!-- <h2>Prototype</h2> -->
-          <!-- <h3>Attach your plant sample below:</h3> -->
+          <h2>Prototype</h2>
+          <h3>Attach your plant sample below:</h3>
         </div>
         <div class="content">
           <div class="left">
-            <section class="form-box">
-                <!-- <h1>Image Classifier</h1> -->
-                <img id="imagePreview" src="" alt="Upload Your Image">
-                <!-- <img src="#" alt="" id="imagePreview" style="max-width: 100%; max-height: 200px;"> -->
-            </section>
-             <form method="POST" enctype="multipart/form-data" class="file_input">
-                <input  class="file-label" type="file" name="file" accept=".jpg, .jpeg, .png, .gif" id="imageInput" class="file-upload">
-                <br>
-                <input type="submit" value="Upload" class="button-28">
+            <h1>Image Classifier</h1>
+            <form method="POST" enctype="multipart/form-data">
+              <input type="file" name="file" accept=".jpg, .jpeg, .png, .gif" id="imageInput">
+              <br>
+              <input type="submit" value="Upload" class="beautiful-button">
             </form>
             <br>
             <!-- Add an image element for preview -->
-            <!-- <img src="#" alt="" id="imagePreview" style="max-width: 100%; max-height: 200px;"> -->
+            <img src="#" alt="" id="imagePreview" style="max-width: 100%; max-height: 200px;">
 
           </div>
           <div class="right">
@@ -45,10 +41,6 @@
                   <p>Disease Description: {{ data[1] }}</p>
                 {% endif %}
               </div> -->
-              <p class="team-id">Herb ID</p>
-              <h1>Scan and Get Information</h1>
-              <h2>We help people learn a lot about using medicinal plants by giving them access to videos and guidance from experts right away.</h2>
-            <div class="button-class"><button class="button-31" role="button">Our Team</button></div>  
           </div>
         </div>
       </div>
@@ -77,19 +69,9 @@ imageInput.addEventListener('change', function() {
     reader.onload = function(e) {
       imagePreview.src = e.target.result;
     };
-
-    // Hide the content container (including the <h1> element)
-      contentContainer.style.display = 'block';
-        h1Element.style.display = 'none';
-  }  else {
-        // Clear the src attribute if no file is selected
-        uploadedImage.src = '';
-
-        // Show the content container
-        contentContainer.style.display = 'none';
-        h1Element.style.display = 'block';
-    }
+  }
 });
+
   </script>
   <script>
     
